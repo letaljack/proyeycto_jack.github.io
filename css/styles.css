@@ -7,8 +7,7 @@
     --overlay-color: rgba(46, 147, 159, 0.8);  /* Overlay semitransparente */
 }
 
-/* boton */
-
+/* Botón */
 .mi-boton {
     background-color: #6c6561f6; /* Azul verdoso */
     border-color: #2E939F; /* Color del borde */
@@ -25,7 +24,6 @@
     background-color: #196e7b; /* Azul más oscuro al pasar el mouse */
     border-color: #257a87;
 }
-
 
 /* Navbar */
 .navbar-brand {
@@ -83,7 +81,6 @@
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero-text {
     color: var(--light-color);
     text-shadow: 2px 2px 6px rgba(0,0,0,0.9), -2px -2px 6px rgba(0,0,0,0.9);
@@ -120,9 +117,6 @@
     background: linear-gradient(rgba(0,0,0,0.6), rgba(46,147,159,0.3));
     z-index: -1;
 }
-
-
-
 
 /* Mission & Vision Card */
 .card.bg-dark-transparent {
@@ -297,29 +291,25 @@ footer::before {
    ============================ */
 /* Reset básico */
 
-  
-  /* Estilo global */
+/* Estilo global */
 
-  
-  /* Sección de Servicios Ejecutados */
-  .section {
+/* Sección de Servicios Ejecutados */
+.section {
     padding: 100px 20px;
     background: #ECECEC;
     text-align: center;
-  }
-  
-  /* Título de la sección */
+}
 
-
-  .section h2 {
+/* Título de la sección */
+.section h2 {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 40px;
     text-align: center;
     position: relative;
-  }
-  .section h2::after {
+}
+.section h2::after {
     content: "";
     width: 400px;
     height: 4px;
@@ -327,19 +317,19 @@ footer::before {
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
-  }
-  
-  /* Contenedor de tarjetas */
-  .cards-container {
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* Estilos de cada tarjeta */
-  .card {
+}
+
+/* Estilos de cada tarjeta */
+.card {
     background: linear-gradient(135deg, #9c8c4c 0%, rgb(46, 147, 159) 100%);
     padding: 30px;
     border-radius: 15px;
@@ -349,9 +339,9 @@ footer::before {
     transform: translateY(40px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     position: relative;
-  }
-  
-  .card::before {
+}
+
+.card::before {
     content: "";
     position: absolute;
     top: -30px;
@@ -361,22 +351,91 @@ footer::before {
     background: #ec7b11;
     border-radius: 60%;
     opacity: 0.5;
-    transform: scale(0);    
+    transform: scale(0);
     transition: transform 0.4s ease;
-  }
-  
-  .card:hover::before {
+}
+
+.card:hover::before {
     transform: scale(1);
-  }
-  
-  .card h3 {
+}
+
+.card h3 {
     font-size: 1.8rem;
     color: #191a1b;
     margin-bottom: 15px;
-  }
-  
-  .card p {
+}
+
+.card p {
     font-size: 1rem;
     color: #f4f4f4;
-  }
-  
+}
+
+/* ====================================
+   Consultas de Medios para Responsividad
+======================================= */
+
+/* Dispositivos medianos (tabletas y pantallas hasta 992px) */
+@media (max-width: 992px) {
+    /* Reducir tamaño de la marca en el navbar */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    /* Ajustar tamaño del título del hero */
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    /* Reducir tamaño del botón */
+    .mi-boton {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Dispositivos pequeños (tabletas pequeñas y móviles en horizontal, hasta 768px) */
+@media (max-width: 768px) {
+    /* Reducir la altura del hero para pantallas menores */
+    .hero-section {
+        height: 80vh;
+    }
+    /* Ajustar tamaño del texto en el hero */
+    .hero-text {
+        font-size: 1.8rem;
+    }
+    /* Reducir la imagen del logo */
+    .navbar-logo {
+        max-height: 40px;
+    }
+    /* Ajustar tamaño de los títulos y párrafos en las tarjetas */
+    .card h3 {
+        font-size: 1.4rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles (hasta 576px) */
+@media (max-width: 576px) {
+    /* Ajustar la altura del hero para dispositivos muy pequeños */
+    .hero-section {
+        height: 70vh;
+    }
+    /* Aumentar el padding interno para evitar que el contenido toque los bordes */
+    .hero-section .container {
+        padding: 0 15px;
+    }
+    /* Reducir aún más el tamaño de la marca y del logo */
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    .navbar-logo {
+        max-height: 35px;
+    }
+    /* Ajustar tamaños de textos en el hero */
+    .hero-text {
+        font-size: 1.6rem;
+    }
+    h1.display-4 {
+        font-size: 2rem;
+    }
+}
