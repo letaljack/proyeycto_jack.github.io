@@ -30,6 +30,8 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
+    /* Permitir que el texto envuelva en móviles */
+    white-space: nowrap;
 }
 
 .navbar-logo {
@@ -412,6 +414,11 @@ footer::before {
     .section-bg {
         background-attachment: scroll;
     }
+    /* Ajustar la imagen del hero para evitar la línea blanca al desplazarla */
+    .hero-image {
+        width: 110%;
+        left: -5%;
+    }
 }
 
 /* Móviles (hasta 576px) */
@@ -424,9 +431,10 @@ footer::before {
     .hero-section .container {
         padding: 0 15px;
     }
-    /* Reducir aún más el tamaño de la marca y del logo */
+    /* Reducir aún más el tamaño de la marca y del logo; permitir envolver el texto */
     .navbar-brand {
         font-size: 0.9rem;
+        white-space: normal;
     }
     .navbar-logo {
         max-height: 35px;
