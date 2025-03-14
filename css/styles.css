@@ -428,7 +428,7 @@ footer::before {
         padding: 0 15px;
     }
     .navbar-brand {
-        font-size: 0.8rem;
+        font-size: 1.2rem;  /* Aumentado para que se vea más grande en celular */
         white-space: normal;
     }
     .navbar-logo {
