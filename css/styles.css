@@ -289,10 +289,6 @@ footer::before {
 /* ============================
    Estilo Profesional: Trabajos Realizados
    ============================ */
-/* Reset básico */
-
-/* Estilo global */
-
 /* Sección de Servicios Ejecutados */
 .section {
     padding: 100px 20px;
@@ -411,6 +407,10 @@ footer::before {
     }
     .card p {
         font-size: 0.9rem;
+    }
+    /* IMPORTANTE: Desactivar el fondo fijo para evitar problemas en móviles */
+    .section-bg {
+        background-attachment: scroll;
     }
 }
 
