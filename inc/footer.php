@@ -9,7 +9,6 @@
                     <li><i class="bi bi-telephone"></i> <?php echo $company_info['phone2']; ?></li>
                     <li><i class="bi bi-telephone"></i> <?php echo $company_info['phone3']; ?></li>
                     <li><i class="bi bi-telephone"></i> <?php echo $company_info['phone4']; ?></li>
-                    <li><i class="bi bi-telephone"></i> <?php echo $company_info['phone5']; ?></li>
                     <li><i class="bi bi-envelope"></i> <?php echo $company_info['email']; ?></li>
                 </ul>
             </div>
