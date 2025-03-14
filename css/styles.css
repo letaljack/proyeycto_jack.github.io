@@ -1,3 +1,8 @@
+/* Evita que cualquier elemento se desborde horizontalmente */
+html, body {
+    overflow-x: hidden;
+}
+
 :root {
     --primary-color: #2E939F;  /* Color principal del logo */
     --secondary-color: #565656;  /* Color secundario del logo */
@@ -30,7 +35,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
-    /* Permitir que el texto envuelva en móviles */
+    /* Por defecto se evita el wrap para que luzca en una línea, pero en móviles se permitirá */
     white-space: nowrap;
 }
 
@@ -372,74 +377,63 @@ footer::before {
    Consultas de Medios para Responsividad
 ======================================= */
 
-/* Dispositivos medianos (tabletas y pantallas hasta 992px) */
+/* Dispositivos medianos (hasta 992px) */
 @media (max-width: 992px) {
-    /* Reducir tamaño de la marca en el navbar */
     .navbar-brand {
         font-size: 1rem;
     }
-    /* Ajustar tamaño del título del hero */
     .hero-section h1 {
         font-size: 2.5rem;
     }
-    /* Reducir tamaño del botón */
     .mi-boton {
         font-size: 1rem;
         padding: 8px 16px;
     }
 }
 
-/* Dispositivos pequeños (tabletas pequeñas y móviles en horizontal, hasta 768px) */
+/* Dispositivos pequeños (hasta 768px) */
 @media (max-width: 768px) {
-    /* Reducir la altura del hero para pantallas menores */
     .hero-section {
         height: 80vh;
     }
-    /* Ajustar tamaño del texto en el hero */
     .hero-text {
         font-size: 1.8rem;
     }
-    /* Reducir la imagen del logo */
     .navbar-logo {
         max-height: 40px;
     }
-    /* Ajustar tamaño de los títulos y párrafos en las tarjetas */
     .card h3 {
         font-size: 1.4rem;
     }
     .card p {
         font-size: 0.9rem;
     }
-    /* IMPORTANTE: Desactivar el fondo fijo para evitar problemas en móviles */
+    /* Evitar problemas del fondo fijo en móviles */
     .section-bg {
         background-attachment: scroll;
     }
-    /* Ajustar la imagen del hero para evitar la línea blanca al desplazarla */
+    /* Ajustamos la imagen del hero para minimizar el espacio blanco */
     .hero-image {
-        width: 110%;
-        left: -5%;
+        width: 105%;
+        left: -2.5%;
     }
 }
 
 /* Móviles (hasta 576px) */
 @media (max-width: 576px) {
-    /* Ajustar la altura del hero para dispositivos muy pequeños */
     .hero-section {
         height: 70vh;
     }
-    /* Aumentar el padding interno para evitar que el contenido toque los bordes */
     .hero-section .container {
         padding: 0 15px;
     }
-    /* Reducir aún más el tamaño de la marca y del logo; permitir envolver el texto */
     .navbar-brand {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         white-space: normal;
     }
     .navbar-logo {
         max-height: 35px;
     }
-    /* Ajustar tamaños de textos en el hero */
     .hero-text {
         font-size: 1.6rem;
     }
