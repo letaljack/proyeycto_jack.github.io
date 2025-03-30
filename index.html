@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YAFER S.A.C - Contratista Minero y Servicios Generales. Soluciones integrales para empresas y oportunidades laborales para profesionales del sector.">
+  <title>YAFER S.A.C - Servicios Mineros y Oportunidades Laborales</title>
+  <!-- Bootstrap, AOS, FontAwesome y Animate.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <svg width="80" height="80" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#1a3d5d" stroke-width="5" />
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="5" stroke-dasharray="283" stroke-dashoffset="283" class="circle-animation" />
+      </svg>
+      <h3>YAFER S.A.C</h3>
+    </div>
+  </div>
+
+  <!-- Botón flotante para cambiar de vista -->
+  <div class="view-toggle-container">
+    <button id="view-toggle-btn" class="view-toggle-btn" onclick="toggleView()">
+      <span id="current-view">Empresa</span>
+      <i class="fas fa-exchange-alt"></i>
+    </button>
+  </div>
+
+  <!-- Navegación principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio">
+        <span class="brand-text">YAFER S.A.C</span>
+        <span class="brand-tagline" id="navbar-tagline">Contratista Minero</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="nav-links-container">
+          <!-- Enlaces para vista Empresa -->
+          <li class="nav-item empresa-link">
+            <a class="nav-link" href="#inicio"><i class="fas fa-home me-1 text-primary"></i> Inicio</a>
+          </li>
+          <li class="nav-item empresa-link">
+            <a class="nav-link" href="#nosotros"><i class="fas fa-users me-1 text-primary"></i> Nosotros</a>
+          </li>
+          <li class="nav-item empresa-link">
+            <a class="nav-link" href="#servicios"><i class="fas fa-tools me-1 text-primary"></i> Servicios</a>
+          </li>
+          <li class="nav-item empresa-link">
+            <a class="nav-link" href="#proyectos"><i class="fas fa-project-diagram me-1 text-primary"></i> Proyectos</a>
+          </li>
+          <li class="nav-item empresa-link">
+            <a class="nav-link" href="#contacto"><i class="fas fa-envelope me-1 text-primary"></i> Contacto</a>
+          </li>
+          <!-- Enlaces para vista Empleador -->
+          <li class="nav-item empleador-link d-none">
+            <a class="nav-link" href="#inicioEmpleador"><i class="fas fa-home me-1 text-primary"></i> Inicio</a>
+          </li>
+          <li class="nav-item empleador-link d-none">
+            <a class="nav-link" href="#oportunidades"><i class="fas fa-briefcase me-1 text-primary"></i> Oportunidades</a>
+          </li>
+          <li class="nav-item empleador-link d-none">
+            <a class="nav-link" href="#beneficios"><i class="fas fa-medal me-1 text-primary"></i> Beneficios</a>
+          </li>
+          <li class="nav-item empleador-link d-none">
+            <a class="nav-link" href="#postulacion"><i class="fas fa-file-alt me-1 text-primary"></i> Postulación</a>
+          </li>
+          <li class="nav-item empleador-link d-none">
+            <a class="nav-link" href="#contactoRRHH"><i class="fas fa-headset me-1 text-primary"></i> Contacto RRHH</a>
+          </li>
+          <!-- Botón para cambiar entre vistas -->
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-warning nav-toggle-btn" onclick="toggleView()">
+              <span id="toggle-text">Ver Empleador</span>
+              <i class="fas fa-exchange-alt ms-1"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN PARA EMPRESA -->
+  <section id="empresa-content">
+    <!-- Hero Empresa -->
+    <section class="hero-section empresa-hero" id="inicio">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 hero-content animate__animated animate__fadeIn" data-aos="fade-right">
+            <h1 class="hero-title"><i class="fas fa-briefcase text-primary"></i> Tu Socio Estratégico</h1>
+            <h2 class="hero-subtitle">Servicios Integrales YAFER S.A.C</h2>
+            <p class="hero-description">
+              Somos líderes en contratación minera y servicios generales, brindando soluciones a medida para potenciar tu empresa.
+            </p>
+            <a href="#nosotros" class="btn btn-warning btn-lg">
+              <i class="fas fa-users me-2"></i>Conócenos
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <a href="#servicios">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-5">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Acerca de Nosotros</span>
+          <h2 class="section-title">¿Quiénes Somos?</h2>
+          <p class="section-subtitle">Más de 12 años impulsando proyectos mineros y de servicios integrales.</p>
+        </div>
+        <div class="row align-items-center mt-4" data-aos="fade-up">
+          <div class="col-lg-6">
+            <img src="img/empresa-about.jpg" alt="Nosotros" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6">
+            <p>
+              En YAFER S.A.C combinamos experiencia y tecnología para ofrecer soluciones de alto impacto en el sector minero. Nuestro compromiso es garantizar calidad, seguridad e innovación en cada proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Servicios</span>
+          <h2 class="section-title">Nuestros Servicios Integrales</h2>
+          <p class="section-subtitle">Proyectos, mantenimiento, consultoría y más.</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <!-- Tarjetas de Servicio: se fuerza una altura uniforme -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-card uniform-card">
+              <i class="fas fa-building"></i>
+              <h4 class="mt-3">Obras Civiles</h4>
+              <p>Ejecutamos proyectos de infraestructura con altos estándares de calidad y eficiencia.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card uniform-card">
+              <i class="fas fa-cogs"></i>
+              <h4 class="mt-3">Metal Mecánico</h4>
+              <p>Soluciones en soldadura y montaje de estructuras adaptadas a las necesidades de tu proyecto.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-card uniform-card">
+              <i class="fas fa-leaf"></i>
+              <h4 class="mt-3">Gestión Ambiental</h4>
+              <p>Implementamos acciones para el manejo responsable del medio ambiente en tus operaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="py-5">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Proyectos</span>
+          <h2 class="section-title1">Nuestros Proyectos</h2>
+          <p class="section-subtitle1">Casos de éxito que marcan la diferencia</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <!-- Tarjeta Proyecto 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-card">
+              <img src="img/empresa-proyecto1.jpg" alt="Proyecto 1" class="img-fluid rounded">
+              <div class="project-info">
+                <h4>Infraestructura Minera</h4>
+                <p>Construcción de vialidades y estructuras para operaciones mineras.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta Proyecto 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-card">
+              <img src="img/empresa-proyecto2.jpg" alt="Proyecto 2" class="img-fluid rounded">
+              <div class="project-info">
+                <h4>Mantenimiento Industrial</h4>
+                <p>Servicios integrales de mantenimiento para equipos y estructuras.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta Proyecto 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-card">
+              <img src="img/empresa-proyecto3.jpg" alt="Proyecto 3" class="img-fluid rounded">
+              <div class="project-info">
+                <h4>Consultoría Técnica</h4>
+                <p>Asesoría especializada en proyectos de alta complejidad.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto (Empresa) -->
+    <section id="contacto" class="contact-section py-5">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Contacto</span>
+          <h2 class="section-title2">Contáctanos</h2>
+          <p class="section-subtitle2">Estamos listos para atender tus consultas</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="contact-info-card">
+              <h3><i class="fas fa-address-book me-2 text-primary"></i>Información de contacto</h3>
+              <p><i class="fas fa-phone text-primary"></i> 928-882-148</p>
+              <p><i class="fas fa-envelope text-primary"></i> <a href="mailto:Yafer.sac.sg@gmail.com">Yafer.sac.sg@gmail.com</a></p>
+              <p><i class="fas fa-map-marker-alt text-primary"></i> ubicación</p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <form id="contact-form">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Tu correo">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu mensaje"></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg w-100">
+                <i class="fas fa-paper-plane me-2"></i>Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- SECCIÓN PARA EMPLEADOR -->
+  <section id="empleador-content" class="d-none">
+    <!-- Hero Empleador -->
+    <section class="hero-section empleador-hero" id="inicioEmpleador">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 hero-content animate__animated animate__fadeIn" data-aos="fadeInRight">
+            <span class="hero-badge" data-aos="fade-right" data-aos-delay="200">Contratista Minero</span>
+            <h1 class="hero-title" data-aos="fade-right" data-aos-delay="300"><i class="fas fa-briefcase text-primary"></i> Construye tu futuro profesional</h1>
+            <h2 class="hero-subtitle" data-aos="fade-right" data-aos-delay="400">Oportunidades Laborales en YAFER S.A.C</h2>
+            <p class="hero-description" data-aos="fade-right" data-aos-delay="500">
+              Forma parte de un equipo comprometido con la excelencia y la seguridad en el sector minero. Desarrolla tu carrera en un ambiente que valora tu talento.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+              <a href="#oportunidades" class="btn btn-warning btn-lg">
+                <i class="fas fa-briefcase me-2"></i>Ver Oportunidades
+              </a>
+              <a href="#postulacion" class="btn btn-outline-light btn-lg ms-2">
+                <i class="fas fa-file-alt me-2"></i>Cómo Postular
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <a href="#oportunidades">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección de Oportunidades Laborales -->
+    <section id="oportunidades" class="py-5">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Oportunidades</span>
+          <h2 class="section-title">Vacantes Disponibles</h2>
+          <p class="section-subtitle">Encuentra el puesto ideal para impulsar tu carrera</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <!-- Tarjeta de Vacante 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="vacancy-card">
+              <div class="vacancy-badge">Tiempo Completo</div>
+              <h3 class="vacancy-title">Ingeniero de Minas</h3>
+              <div class="vacancy-location">
+                <i class="fas fa-map-marker-alt text-primary"></i> La Libertad, Perú
+              </div>
+              <p class="vacancy-description">
+                Buscamos ingenieros de minas con experiencia en planificación y supervisión de operaciones subterráneas.
+              </p>
+              <div class="vacancy-requirements">
+                <h4>Requisitos:</h4>
+                <ul>
+                  <li><i class="fas fa-check-circle text-primary"></i> 3+ años de experiencia</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> Título en Ingeniería de Minas</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> Conocimiento en seguridad minera</li>
+                </ul>
+              </div>
+              <a href="#postulacion" class="btn btn-primary vacancy-btn">Postular ahora</a>
+            </div>
+          </div>
+          <!-- Tarjeta de Vacante 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="vacancy-card">
+              <div class="vacancy-badge">Tiempo Completo</div>
+              <h3 class="vacancy-title">Supervisor de Seguridad</h3>
+              <div class="vacancy-location">
+                <i class="fas fa-map-marker-alt text-primary"></i> Áncash, Perú
+              </div>
+              <p class="vacancy-description">
+                Encargado de supervisar y garantizar el cumplimiento de protocolos de seguridad en operaciones mineras.
+              </p>
+              <div class="vacancy-requirements">
+                <h4>Requisitos:</h4>
+                <ul>
+                  <li><i class="fas fa-check-circle text-primary"></i> Certificación en seguridad industrial</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> 2+ años en supervisión</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> Conocimiento de normativas OSHA</li>
+                </ul>
+              </div>
+              <a href="#postulacion" class="btn btn-primary vacancy-btn">Postular ahora</a>
+            </div>
+          </div>
+          <!-- Tarjeta de Vacante 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="vacancy-card">
+              <div class="vacancy-badge">Tiempo Completo</div>
+              <h3 class="vacancy-title">Técnico en Soldadura</h3>
+              <div class="vacancy-location">
+                <i class="fas fa-map-marker-alt text-primary"></i> Arequipa, Perú
+              </div>
+              <p class="vacancy-description">
+                Se requiere técnico especializado en soldadura para proyectos de metal mecánica en operaciones mineras.
+              </p>
+              <div class="vacancy-requirements">
+                <h4>Requisitos:</h4>
+                <ul>
+                  <li><i class="fas fa-check-circle text-primary"></i> Certificación en soldadura</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> Experiencia en soldadura industrial</li>
+                  <li><i class="fas fa-check-circle text-primary"></i> Disponibilidad para trabajo en altura</li>
+                </ul>
+              </div>
+              <a href="#postulacion" class="btn btn-primary vacancy-btn">Postular ahora</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="#contactoRRHH" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-plus-circle me-2"></i>Ver más oportunidades
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Beneficios -->
+    <section id="beneficios" class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Beneficios</span>
+          <h2 class="section-title">¿Por qué trabajar con nosotros?</h2>
+          <p class="section-subtitle">En YAFER S.A.C valoramos el talento y ofrecemos un ambiente laboral excepcional</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <!-- Beneficio 1 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-card uniform-benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-dollar-sign text-primary"></i>
+              </div>
+              <h3 class="benefit-title">Remuneración Competitiva</h3>
+              <p class="benefit-description">
+                Salarios por encima del promedio y bonificaciones por cumplimiento de objetivos.
+              </p>
+            </div>
+          </div>
+          <!-- Beneficio 2 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefit-card uniform-benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-graduation-cap text-primary"></i>
+              </div>
+              <h3 class="benefit-title">Desarrollo Profesional</h3>
+              <p class="benefit-description">
+                Capacitaciones continuas y oportunidades de crecimiento interno.
+              </p>
+            </div>
+          </div>
+          <!-- Beneficio 3 -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-card uniform-benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-shield-alt text-primary"></i>
+              </div>
+              <h3 class="benefit-title">Seguridad y Bienestar</h3>
+              <p class="benefit-description">
+                Protocolos de seguridad y programas de bienestar para nuestros colaboradores.
+              </p>
+            </div>
+          </div>
+          <!-- Beneficio 4 (Equilibrio Laboral) -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="benefit-card uniform-benefit">
+              <div class="benefit-icon">
+                <i class="fas fa-balance-scale text-primary"></i>
+              </div>
+              <h3 class="benefit-title">Equilibrio Laboral</h3>
+              <p class="benefit-description">
+                Horarios flexibles y periodos de descanso adecuados para mantener calidad de vida.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Postulación -->
+    <section id="postulacion" class="py-5">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Postulación</span>
+          <h2 class="section-title">¿Cómo postular?</h2>
+          <p class="section-subtitle">Proceso simple y transparente para unirte a nuestro equipo</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+            <div class="process-image">
+              <img src="img/2.jpg" alt="Proceso de selección" class="img-fluid rounded shadow">
+              <div class="process-overlay">
+                <div class="process-caption">
+                  <h3>Trabaja con nosotros</h3>
+                  <p>Únete a un equipo comprometido con la excelencia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+            <div class="application-process">
+              <div class="timeline">
+                <!-- Ajuste en padding para que se vea completo el texto -->
+                <div class="timeline-item">
+                  <div class="timeline-dot">1</div>
+                  <div class="timeline-content">
+                    <h3>Envío de documentos</h3>
+                    <p>Envía tu CV y carta de presentación destacando tu experiencia y habilidades.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot">2</div>
+                  <div class="timeline-content">
+                    <h3>Evaluación inicial</h3>
+                    <p>Revisión de tu perfil y contacto para entrevista preliminar si cumples con los requisitos.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot">3</div>
+                  <div class="timeline-content">
+                    <h3>Entrevista técnica</h3>
+                    <p>Evaluación de tus conocimientos y experiencia específica para el puesto.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot">4</div>
+                  <div class="timeline-content">
+                    <h3>Evaluación psicológica</h3>
+                    <p>Pruebas para evaluar habilidades blandas y compatibilidad con la cultura organizacional.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot">5</div>
+                  <div class="timeline-content">
+                    <h3>Entrevista final</h3>
+                    <p>Conoce al equipo y discute las condiciones finales de contratación.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="application-requirements mt-5" data-aos="fade-up">
+          <h3 class="text-center mb-4">Documentación necesaria</h3>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="requirement-card">
+                <div class="requirement-icon">
+                  <i class="fas fa-file-alt text-primary"></i>
+                </div>
+                <h4>CV actualizado</h4>
+                <p>Formato PDF con experiencia y formación académica.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="requirement-card">
+                <div class="requirement-icon">
+                  <i class="fas fa-envelope-open-text text-primary"></i>
+                </div>
+                <h4>Carta de presentación</h4>
+                <p>Explica por qué te interesa trabajar con nosotros.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="requirement-card">
+                <div class="requirement-icon">
+                  <i class="fas fa-id-card text-primary"></i>
+                </div>
+                <h4>Documentos de identidad</h4>
+                <p>DNI o carnet de extranjería escaneado.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="requirement-card">
+                <div class="requirement-icon">
+                  <i class="fas fa-certificate text-primary"></i>
+                </div>
+                <h4>Certificados</h4>
+                <p>Títulos académicos y certificaciones profesionales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto RRHH -->
+    <section id="contactoRRHH" class="py-5 bg-dark text-light">
+      <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+          <span class="section-badge">Contacto</span>
+          <h2 class="section-title">Recursos Humanos</h2>
+          <p class="section-subtitle">Resolvemos tus dudas y recibimos tu postulación</p>
+        </div>
+        <div class="row g-4 mt-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="contact-info-card">
+              <h3><i class="fas fa-headset me-2 text-primary"></i>Información de contacto</h3>
+              <div class="contact-item">
+                <i class="fas fa-envelope text-primary"></i>
+                <div>
+                  <h4>Correo electrónico</h4>
+                  <p class="selectable"><a href="mailto:Yafer.sac.sg@gmail.com">Yafer.sac.sg@gmail.com</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt text-primary"></i>
+                <div>
+                  <h4>Teléfono</h4>
+                  <p class="selectable">928-882-148</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock text-primary"></i>
+                <div>
+                  <h4>Horario de atención</h4>
+                  <p>Lunes a viernes: 8:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+              <div class="contact-social">
+                <h4>Síguenos en redes sociales</h4>
+                <div class="social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="contact-form-card">
+              <h3>Envía tu consulta</h3>
+              <form id="rrhh-contact-form">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Tu nombre y apellidos">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" placeholder="Tu número de contacto">
+                </div>
+                <div class="mb-3">
+                  <label for="puesto" class="form-label">Puesto de interés</label>
+                  <select class="form-select" id="puesto">
+                    <option selected>Selecciona un puesto</option>
+                    <option value="1">Ingeniero de Minas</option>
+                    <option value="2">Supervisor de Seguridad</option>
+                    <option value="3">Técnico en Soldadura</option>
+                    <option value="4">Otro (especificar en mensaje)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe tu consulta o información adicional"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="cv" class="form-label">Adjuntar CV (opcional)</label>
+                  <input class="form-control" type="file" id="cv">
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg w-100">
+                  <i class="fas fa-paper-plane me-2"></i>Enviar consulta
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
